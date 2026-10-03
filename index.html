@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nivetha Krishnan - MCA student and aspiring developer from Coimbatore. Portfolio with skills, experience, projects and contact links.">
+<title>Nivetha Krishnan | Aspiring Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f2f5ef;
+    --panel: #3f5d45;
+    --panel-text: #eef3ec;
+    --ink: #1e2a21;
+    --muted: #55655a;
+    --line: #cfd8cb;
+    --accent: #9a5b24;
+    --chip: #e3eadf;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+  h1, h2, h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; line-height: 1.15; }
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  .layout { display: flex; flex-direction: column; min-height: 100vh; }
+
+  .profile {
+    background: var(--panel);
+    color: var(--panel-text);
+    padding: 2.5rem 1.5rem;
+  }
+  .profile h1 { font-size: clamp(2.4rem, 9vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; }
+  .role { margin-top: 0.75rem; font-size: 1.15rem; max-width: 24ch; }
+  .location { margin-top: 0.25rem; opacity: 0.8; }
+  .profile nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin-top: 1.75rem; }
+  .profile nav a { text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 2px; }
+  .profile nav a:hover { border-bottom-color: var(--panel-text); }
+  .links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.75rem; }
+  .links a {
+    text-decoration: none;
+    border: 1.5px solid var(--panel-text);
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .links a:hover { background: var(--panel-text); color: var(--panel); }
+
+  main { padding: 2rem 1.5rem 3rem; max-width: 52rem; }
+  section { padding: 2rem 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+  h2 { font-size: 1.7rem; margin-bottom: 1rem; }
+  p { max-width: 65ch; }
+
+  .skills { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: 0.6rem; }
+  .skills li { background: var(--chip); padding: 0.5rem 0.9rem; border-radius: 6px; font-weight: 600; }
+
+  .entry { margin-bottom: 1.5rem; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; align-items: baseline; }
+  .entry h3 { font-size: 1.2rem; }
+  .when { color: var(--accent); font-weight: 600; }
+  .sub { color: var(--muted); }
+  .entry ul { margin: 0.6rem 0 0 1.2rem; }
+  .entry li { margin-bottom: 0.3rem; max-width: 65ch; }
+  .entry li::marker { color: var(--accent); }
+  .text-link { color: var(--accent); font-weight: 600; }
+
+  .edu-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+
+  .certs { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+  .certs li { border-left: 3px solid var(--accent); padding-left: 0.9rem; }
+  .certs span { display: block; color: var(--muted); font-size: 0.95rem; }
+
+  footer { padding: 1.5rem; color: var(--muted); font-size: 0.95rem; border-top: 1px solid var(--line); }
+
+  @media (min-width: 60rem) {
+    .layout { flex-direction: row; }
+    .profile {
+      position: sticky; top: 0; height: 100vh;
+      width: 22rem; flex-shrink: 0;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 3rem 2.5rem;
+    }
+    .content { flex: 1; display: flex; flex-direction: column; }
+    main { padding: 3rem 3.5rem; }
+    footer { padding: 1.5rem 3.5rem; }
+    .edu-grid { grid-template-columns: 1fr 1fr; }
+    .certs { grid-template-columns: 1fr 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <header class="profile">
+    <h1>Nivetha Krishnan</h1>
+    <p class="role">MCA student and aspiring developer</p>
+    <p class="location">Coimbatore, Tamil Nadu</p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+      </ul>
+    </nav>
+    <div class="links">
+      <a href="https://github.com/Nivetha-Krishnan" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/nivetha-k-3493002a8" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:Nivethafeb15.krishnan@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <div class="content">
+    <main>
+      <section id="about">
+        <h2>About me</h2>
+        <p>I am an MCA student who enjoys building practical applications and solving problems. I work with Python, Java, SQL, HTML, CSS and PHP, and I want to keep learning new technologies and gain real-world experience through an internship.</p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>Python (basics)</li>
+          <li>Java (basics)</li>
+          <li>VS Code</li>
+          <li>XAMPP</li>
+          <li>MS Word</li>
+          <li>MS PowerPoint</li>
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Software Development Intern</h3>
+            <span class="when">May 2025 to Nov 2025</span>
+          </div>
+          <p class="sub">Visval Career Solution Pvt. Ltd., Chennai</p>
+          <ul>
+            <li>Supported fundamental web development tasks.</li>
+            <li>Used PHP and MySQL to build simple applications.</li>
+            <li>Helped develop login modules and admin dashboards.</li>
+            <li>Gained hands-on experience in a real-time work environment.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="project">
+        <h2>Project</h2>
+        <article class="entry">
+          <h3>Eco Friendly Waste Collection and Recycling Product Sales Management System</h3>
+          <ul>
+            <li>A web app to manage waste collection and recycling.</li>
+            <li>Users request a pickup by entering waste type, quantity and address.</li>
+            <li>Admins view all requests and assign volunteers for pickup.</li>
+            <li>Customers browse and buy recycled products.</li>
+            <li>Built with PHP, MySQL, HTML, CSS, JavaScript, XAMPP and VS Code.</li>
+          </ul>
+          <p style="margin-top:0.6rem"><a class="text-link" href="https://github.com/Nivetha-Krishnan/eco-waste-management-system" target="_blank" rel="noopener">View the code on GitHub</a></p>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="edu-grid">
+          <article class="entry">
+            <h3>Master of Computer Applications</h3>
+            <p class="sub">Bharathiar University, Coimbatore</p>
+            <p class="when">Expected May 2028</p>
+          </article>
+          <article class="entry">
+            <h3>B.Sc. Computer Science</h3>
+            <p class="sub">Alagappa Arts &amp; Science College, Karaikudi</p>
+            <p class="when">May 2026 | CGPA 6.8</p>
+          </article>
+          <article class="entry">
+            <h3>Higher Secondary Certificate</h3>
+            <p class="sub">Alagappa Model Hr. Sec. School, Karaikudi</p>
+            <p class="when">May 2023 | 82%</p>
+          </article>
+          <article class="entry">
+            <h3>Secondary School Leaving Certificate</h3>
+            <p class="sub">Alagappa Model Hr. Sec. School, Karaikudi</p>
+            <p class="when">May 2021 | 100%</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="certificates">
+        <h2>Certificates and workshops</h2>
+        <ul class="certs">
+          <li>OOPs using Python<span>Infosys Springboard, Sep 2024</span></li>
+          <li>Java SE8 Features<span>Infosys Springboard, Mar 2025</span></li>
+          <li>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate<span>Oracle University, Aug 2025</span></li>
+          <li>Oracle Database Foundation<span>Naan Mudhalvan (TNSDC), AdroIT Technologies, Nov 2025</span></li>
+          <li>Full Stack Development and AI Masterclass<span>NoviTech R&amp;D Pvt. Ltd., Jun and Aug 2026</span></li>
+          <li>Super Searchers Workshop, Meet LEA AI Literacy Program<span>Google Workshops, Jul 2026</span></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Nivetha Krishnan</p>
+    </footer>
+  </div>
+
+</div>
+</body>
+</html>
